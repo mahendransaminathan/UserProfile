@@ -6,3 +6,6 @@
 • dotnet add package Microsoft.EntityFrameworkCore.Tools  
 • dotnet ef migrations add InitialCreate  
 • dotnet ef database update  
+• dotnet add package Swashbuckle.AspNetCore  
+• http://localhost:5037/swagger/index.html  
+
