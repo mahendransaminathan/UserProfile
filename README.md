@@ -9,3 +9,6 @@
 • dotnet add package Swashbuckle.AspNetCore  
 • http://localhost:5037/swagger/index.html  
 
+## Unit Tests
+• dotnet add package Moq  
+• dotnet add package Microsoft.AspNetCore.Mvc  
