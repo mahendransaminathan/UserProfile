@@ -7,7 +7,7 @@ namespace UserProfile.Repositories
         Task<User> CreateUser(User user);
         Task<User> GetUserById(int userId);
         Task<IEnumerable<User>> GetAllUsers();
-        Task<User> UpdateUser(User user);
-        
+        Task<User> UpdateUser(User user);      
+
     }
 }

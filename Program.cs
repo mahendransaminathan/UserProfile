@@ -19,7 +19,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost",
-        builder => builder.WithOrigins("http://localhost:3000"                          
+        builder => builder.WithOrigins("http://localhost:5037"                          
                                         )  // Allow your frontend's URL
 
                           .AllowAnyHeader()                   // Allow all headers

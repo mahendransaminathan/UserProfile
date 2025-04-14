@@ -51,8 +51,7 @@ namespace UserProfile.Controllers
             {
                 return BadRequest("User ID mismatch or user is null");
             }
-
-            var updatedUser = await _userService.UpdateUser(user);
+            var updatedUser = await _userService.UpdateUser(id, user);
             if (updatedUser == null)
             {
                 return NotFound();

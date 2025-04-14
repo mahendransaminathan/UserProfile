@@ -26,9 +26,22 @@ namespace UserProfile.Services
         {
             return await _userRepository.GetAllUsers();
         }
-        public async Task<User> UpdateUser(User user)
+        public async Task<User> UpdateUser(int id, User user)
         {
-            return await _userRepository.UpdateUser(user);
+          
+            User existingUser = await _userRepository.GetUserById(id);
+            if (existingUser == null)
+                throw new KeyNotFoundException("User not found.");
+
+            existingUser.FirstName = user.FirstName;
+            existingUser.LastName = user.LastName;
+            existingUser.Email = user.Email;
+            existingUser.PhoneNumber = user.PhoneNumber;
+            existingUser.Username = user.Username;
+            existingUser.Password = user.Password;
+            existingUser.DateOfBirth = user.DateOfBirth;
+
+            return await _userRepository.UpdateUser(existingUser);
         }
     }
 }
